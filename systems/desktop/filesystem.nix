@@ -37,9 +37,7 @@ in {
 
   systemd.tmpfiles.rules = [
     "Z ${config.home-manager.users.${user0}.home.homeDirectory} 0755 ${user0} users -"
-    # "Z ${desktop.storage0.mount} 0755 ${user0} users -"
-    #  "Z ${desktop.storage1.mount} 0755 ${user0} users -"
+    "Z ${config.home-manager.users.${user0}.home.homeDirectory}/.ssh 0700 ${user0} users -"
   ];
-
   services.udisks2.enable = true;
 }
