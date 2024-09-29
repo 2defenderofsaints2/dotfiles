@@ -1,0 +1,37 @@
+{pkgs, ...}: {
+  home.packages = builtins.attrValues {
+    inherit
+      (pkgs)
+      acpi
+      cifs-utils
+      fastfetch
+      ffmpeg
+      flac
+      gvfs
+      hardinfo
+      inetutils
+      libnatpmp
+      ncdu
+      networkmanager-openvpn
+      nftables
+      nyancat
+      openssl
+      pciutils
+      pinentry
+      playerctl
+      prosody
+      simple-mtpfs
+      sshfs
+      tokei
+      tomb
+      tree
+      unrar
+      unzip
+      wezterm
+      wget
+      wine
+      xdotool
+      zip
+      ;
+  };
+}
