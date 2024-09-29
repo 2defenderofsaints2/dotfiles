@@ -7,7 +7,7 @@ in {
       name = "nixos";
       sync = "";
       ip = {
-        address0 = "";
+        address0 = "192.168.178.38";
       };
       boot = {
         options = ["fmask=0022" "dmask=0022"];
