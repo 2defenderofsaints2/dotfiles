@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment = {
-    enableAllTerminfo = true;
+    enableAllTerminfo = false;
     systemPackages = builtins.attrValues {
       inherit
         (pkgs)
