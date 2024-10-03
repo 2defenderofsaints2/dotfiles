@@ -13,7 +13,7 @@ in {
       enable = true;
       group = name;
       host = "http://${localhost}";
-      models = databasePath;
+      # models = databasePath;
       user = name;
     };
     open-webui = {
@@ -31,7 +31,7 @@ in {
     };
   };
 
-  systemd.tmpfiles.rules = ["Z ${databasePath} 0755 ${name} ${name} -"];
+  # systemd.tmpfiles.rules = ["Z ${databasePath} 0755 ${name} ${name} -"];
 
   networking = {
     firewall = {

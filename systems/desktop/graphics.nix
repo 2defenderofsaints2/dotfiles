@@ -14,12 +14,13 @@
       ];
     };
     nvidia = {
+      open = false;
       modesetting.enable = true;
       powerManagement.enable = false;
       powerManagement.finegrained = false;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.production;
     };
   };
-  # boot.initrd.kernelModules = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia"];
 }

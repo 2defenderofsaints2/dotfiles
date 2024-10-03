@@ -62,7 +62,7 @@ in {
           home-manager
           locale
           nix
-          # ollama
+          ollama
           plasma
           printing
           steam

@@ -5,6 +5,7 @@
       lutris
       prismlauncher
       steam
+      bottles
       ;
   };
 }
