@@ -1,5 +1,5 @@
 {
-  time.timeZone = "Germany/Berlin";
+  time.timeZone = "Europe/Berlin";
 
   i18n = let
     locale = "de_DE.UTF-8";
