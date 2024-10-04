@@ -19,7 +19,6 @@ in {
       allowedTCPPorts = [
         ports.port0
         ports.port1
-        ports.port2
       ];
     };
   };
