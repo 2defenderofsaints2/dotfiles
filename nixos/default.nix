@@ -12,6 +12,7 @@ let
   environment = import ./modules/environment.nix;
   gvfs = import ./modules/gvfs.nix;
   home-manager = import ./modules/home-manager.nix;
+  jellyfin = import ./modules/jellyfin.nix;
   locale = import ./modules/locale.nix;
   network = import ./modules/network.nix;
   nix = import ./modules/nix.nix;
@@ -36,6 +37,7 @@ in {
         environment
         gvfs
         home-manager
+        jellyfin
         locale
         network
         nix
@@ -60,6 +62,7 @@ in {
           environment
           gvfs
           home-manager
+          jellyfin
           locale
           nix
           ollama
