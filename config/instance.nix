@@ -2,6 +2,16 @@ let
   user = "defenderofsaints";
 in {
   instance = {
+    jellyfin = {
+      label = "Jellyfin";
+      name = "jellyfin";
+      paths = {
+      };
+      ports = {
+        port0 = 8096; # Jellyfin HTTP
+        port1 = 8920; # Jellyfin HTTPS
+      };
+    };
     ollama = {
       label = "Ollama";
       name = "ollama";
