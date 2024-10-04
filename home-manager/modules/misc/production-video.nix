@@ -5,6 +5,7 @@
       droidcam
       deskreen
       shotcut
+      mathpix-snipping-tool
       ;
   };
 }
