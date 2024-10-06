@@ -6,20 +6,24 @@
   hardware = {
     graphics = {
       enable = true;
-
-      extraPackages = with pkgs; [
-        rocm-opencl-icd
-        rocm-opencl-runtime
-        rocmPackages.clr.icd
-      ];
+      extraPackages = builtins.attrValues {
+        inherit
+        (pkgs)
+        nvidia-vaapi-driver vaapiVdpau;
+      };
     };
     nvidia = {
-      open = false;
       modesetting.enable = true;
-      powerManagement.enable = false;
-      powerManagement.finegrained = false;
+      forceFullCompositionPipeline = false;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.production;
+      open = true;
+
+      # Try beta, and if it's cucked, switch this back to production.
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      powerManagement = {
+        enable = true;
+        finegrained = false;
+      };
     };
   };
   services.xserver.videoDrivers = ["nvidia"];
